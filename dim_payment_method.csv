@@ -1,0 +1,4 @@
+type,payment_method_id
+Credit Card,1
+Debit Card,2
+Cash,3
