@@ -3,6 +3,11 @@
 
 This project implements a complete data analysis and modeling process based on a customer shopping dataset. A pipeline was developed that covers everything from data extraction and transformation to loading into a PostgreSQL database, followed by analysis and visualization.
 
+## 🏛️ Architecture
+<p align="center">
+  <img src="https://i.imgur.com/QFi7fih.png" alt="Architecture" width="100%" />
+</p>
+
 ## 🚀 Technologies Used
 - **Python** (Pandas, SQLAlchemy, Matplotlib, Seaborn)
 - **Jupyter Notebook**
