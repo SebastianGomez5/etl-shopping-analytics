@@ -1,38 +1,27 @@
-# 📊 ETL: Customer Shopping Dataset - PostgreSQL (NeonDB)
 
-Este proyecto implementa un proceso **ETL (Extract, Transform, Load)** para estructurar y cargar el dataset **Customer Shopping Dataset - Retail Sales Data** en una bodega de datos en **PostgreSQL**, utilizando **NeonDB como servidor en la nube**.  
-El código está desarrollado en **Python** utilizando **Jupyter Notebook** y herramientas como **Pandas y SQLAlchemy**.
+# Customer Shopping Data Analysis
 
-## 🚀 Objetivos
-- Diseñar un **modelo de bodega de datos** adecuado para análisis de ventas minoristas.
-- Extraer los datos del dataset de Kaggle usando **Pandas**.
-- Transformar los datos según el modelo de bodega de datos.
-- Cargar los datos procesados en **PostgreSQL** usando **SQLAlchemy** y **NeonDB** como servidor en la nube.
+This project implements a complete data analysis and modeling process based on a customer shopping dataset. A pipeline was developed that covers everything from data extraction and transformation to loading into a PostgreSQL database, followed by analysis and visualization.
 
-## 📁 Estructura del Repositorio
-
-## 🛠️ Tecnologías Utilizadas
-- **Python 3.x**
+## 🚀 Technologies Used
+- **Python** (Pandas, SQLAlchemy, Matplotlib, Seaborn)
 - **Jupyter Notebook**
-- **Pandas** (para manipulación de datos)
-- **SQLAlchemy** (para conexión con PostgreSQL)
-- **PostgreSQL en NeonDB** (bodega de datos en la nube)
-- **Kaggle API** (para descargar el dataset)
+- **PostgreSQL**
 
-## 📌 Instalación y Configuración
-### 1️⃣ Clonar el repositorio:
-```bash
-git clone https://github.com/tu-usuario/ETL_Customer_Shopping_PostgreSQL.git
-cd ETL_Customer_Shopping_PostgreSQL
-```
-### 2️⃣ Instalar Dependencias:
-```bash
-pip install sqlalchemy psycopg2 pandas
-```
-- **sqlalchemy** para la conexion con la base de datos
-- **psycopg2** el controlador para PostgreSQL
-- **pandas** libreria para gestionar dataframes
-### 3️⃣ Configurar PostgreSQL en NeonDB:
+## 📂 Project Structure
+- **analisis_graficas/** → Contains the development of graphs along with their post-pipeline datasets.
+- **docs/** → Includes project documentation.
+- **etl_pipeline/** → Contains the pipeline development along with the original dataset used and the script for transforming the star schema data warehouse.
 
--   Crear una cuenta en **[NeonDB](https://neon.tech/)**.
--   Crear una base de datos y obtener las credenciales de conexión.
+## 🔧 Setup and Usage
+### 1️⃣ Installing Dependencies
+Make sure you have Python and PostgreSQL installed. Then, install the required packages:
+```bash
+pip install pandas sqlalchemy psycopg2 matplotlib seaborn
+```
+
+### 2️⃣ Connecting to PostgreSQL
+Modify the credentials in the code to match your PostgreSQL server configuration:
+```python
+DATABASE_URL = "postgresql://user:password@localhost:5432/your_database"
+```
