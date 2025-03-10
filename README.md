@@ -21,23 +21,18 @@ This project implements a complete data analysis and modeling process based on a
 - **etl_pipeline/** → Contains the pipeline development, along with the original dataset used and the script for transforming the star schema data warehouse.
 
 ## 🔧 Setup and Usage
-### 1️⃣ Installing Dependencies
-Make sure you have **Docker** installed. Then, install the required Python packages:
-```bash
-pip install pandas sqlalchemy psycopg2 matplotlib seaborn
-```
+### 1️⃣ Running the script to setup a virtual Python environment
+For convenience, there is a `setup_env` script which will provide a virtual environment and install all the necessary dependencies, and will also create a Jupyter kernel called `Proyecto1DS-Python (venv)` which should be selected in the notebooks.
 
 ### 2️⃣ Setting Up and Running PostgreSQL in Docker
-To start a **PostgreSQL** database in a Docker container, use the following command:
-```python
-docker run --name postgres_container -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=your_database -p 5432:5432 -d postgres
+Make sure you have **Docker** installed. To start a **PostgreSQL** database in a Docker container, use the following command:
+```bash
+docker-compose up -d
 ```
+In this way, a container is created, which also executes the command `init.sql` thanks to the postgres entrypoint to initialize the database structure which by default will be called `shopping_mall_dw` and will be connected to port `5433`, with username and password as `postgres`.
+If you want to change the previous parameters (password, execution port, etc.) modify the `docker-compose` file, also make sure to modify the `sqlalchemy engines`.
+
 Verify that the container is running with:
-```python
+```bash
 docker ps
-```
-### 3️⃣ Connecting to PostgreSQL
-Modify the credentials in the code to match the Docker container configuration:
-```python
-DATABASE_URL = "postgresql://user:password@localhost:5432/your_database"
 ```
